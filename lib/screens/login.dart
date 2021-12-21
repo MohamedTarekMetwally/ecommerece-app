@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // ignore_for_file: prefer_const_constructors, deprecated_member_use, sized_box_for_whitespace, avoid_unnecessary_containers, avoid_print, use_key_in_widget_constructors
 import 'package:ecommerece_app/screens/sign_up.dart';
 import 'package:ecommerece_app/widgets/changescreen.dart';
@@ -7,13 +6,11 @@ import 'package:ecommerece_app/widgets/passwordtextformfield.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/MyButton.dart';
-=======
 // ignore_for_file: prefer_const_constructors, deprecated_member_use, sized_box_for_whitespace, avoid_unnecessary_containers, avoid_print
 
 import 'package:ecommerece_app/screens/sign_up.dart';
 import 'package:flutter/material.dart';
 import '../widgets/mybutton.dart';
->>>>>>> 3d56921309f9e6e5915744df76d10ac662fe9356
 
 class Login extends StatefulWidget {
   @override
@@ -37,7 +34,6 @@ void validation() {
 bool obserText = true;
 
 class _LoginState extends State<Login> {
-<<<<<<< HEAD
   Widget _buildAllPart() {
     return Container(
       height: 300,
@@ -106,8 +102,6 @@ class _LoginState extends State<Login> {
     );
   }
 
-=======
->>>>>>> 3d56921309f9e6e5915744df76d10ac662fe9356
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -118,9 +112,7 @@ class _LoginState extends State<Login> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-<<<<<<< HEAD
               _buildAllPart(),
-=======
               Container(
                 height: 300,
                 width: double.infinity,
@@ -179,7 +171,7 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                     //*BUTTON
-                    // MyButton(name: 'LOGIN', 
+                    // MyButton(name: 'LOGIN',
                     // onPressed: (){
                     //   validation();
                     // }
@@ -210,7 +202,6 @@ class _LoginState extends State<Login> {
                   ],
                 ),
               ),
->>>>>>> 3d56921309f9e6e5915744df76d10ac662fe9356
             ],
           ),
         ),
