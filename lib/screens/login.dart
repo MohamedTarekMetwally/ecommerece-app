@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // ignore_for_file: prefer_const_constructors, deprecated_member_use, sized_box_for_whitespace, avoid_unnecessary_containers, avoid_print, use_key_in_widget_constructors
 import 'package:ecommerece_app/screens/sign_up.dart';
 import 'package:ecommerece_app/widgets/changescreen.dart';
@@ -6,6 +7,13 @@ import 'package:ecommerece_app/widgets/passwordtextformfield.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/MyButton.dart';
+=======
+// ignore_for_file: prefer_const_constructors, deprecated_member_use, sized_box_for_whitespace, avoid_unnecessary_containers, avoid_print
+
+import 'package:ecommerece_app/screens/sign_up.dart';
+import 'package:flutter/material.dart';
+import '../widgets/mybutton.dart';
+>>>>>>> 3d56921309f9e6e5915744df76d10ac662fe9356
 
 class Login extends StatefulWidget {
   @override
@@ -29,6 +37,7 @@ void validation() {
 bool obserText = true;
 
 class _LoginState extends State<Login> {
+<<<<<<< HEAD
   Widget _buildAllPart() {
     return Container(
       height: 300,
@@ -97,6 +106,8 @@ class _LoginState extends State<Login> {
     );
   }
 
+=======
+>>>>>>> 3d56921309f9e6e5915744df76d10ac662fe9356
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -107,7 +118,99 @@ class _LoginState extends State<Login> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+<<<<<<< HEAD
               _buildAllPart(),
+=======
+              Container(
+                height: 300,
+                width: double.infinity,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: <Widget>[
+                    Text(
+                      "Login",
+                      style: TextStyle(
+                        fontSize: 50,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    TextFormField(
+                      validator: (value) {
+                        if (value == "") {
+                          return "Please Fill Email";
+                        } else if (!regExp.hasMatch(value!)) {
+                          return "Email Is Invalid";
+                        }
+                        return "";
+                      },
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        hintText: "Email",
+                        hintStyle: TextStyle(color: Colors.black),
+                      ),
+                    ),
+                    TextFormField(
+                      obscureText: obserText,
+                      validator: (value) {
+                        if (value == "") {
+                          return "Please fill password";
+                        } else if (value!.length < 8) {
+                          return "Password is too short";
+                        }
+                        return "";
+                      },
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        hintText: "Password",
+                        suffixIcon: GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              obserText = !obserText;
+                            });
+                          },
+                          child: Icon(
+                              obserText == true
+                                  ? Icons.visibility
+                                  : Icons.visibility_off,
+                              color: Colors.black),
+                        ),
+                        hintStyle: TextStyle(color: Colors.black),
+                      ),
+                    ),
+                    //*BUTTON
+                    // MyButton(name: 'LOGIN', 
+                    // onPressed: (){
+                    //   validation();
+                    // }
+                    // ),
+                    Row(
+                      // ignore: prefer_const_literals_to_create_immutables
+                      children: <Widget>[
+                        Text("I Have Not Account"),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                builder: (ctx) => SignUp(),
+                              ),
+                            );
+                          },
+                          child: Text("SignUp",
+                              style: TextStyle(
+                                color: Colors.cyan,
+                                fontSize: 20,
+                              )),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+>>>>>>> 3d56921309f9e6e5915744df76d10ac662fe9356
             ],
           ),
         ),
